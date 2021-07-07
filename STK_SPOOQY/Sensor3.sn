@@ -1,0 +1,311 @@
+stk.v.12.0
+WrittenBy    STK_v12.0.0
+
+BEGIN Sensor
+
+    Name		 Sensor3
+
+    BEGIN Pattern
+
+        BEGIN Rectangular
+
+            UpDownAngle		  1.4000000000000000e+01
+            SideToSideAngle		  2.0000000000000000e+01
+            AngularPatternResolution		  3.0000000000000004e+00
+
+        END Rectangular
+
+        DetailedTerrainHorizon		 Yes
+
+
+    END Pattern
+
+    BEGIN Pointing
+
+        BEGIN Fixed
+
+            PointingMethod		 YPR
+            Sequence		 321
+            Qx		 -7.0710678118654757e-01
+            Qy		  0.0000000000000000e+00
+            Qz		  0.0000000000000000e+00
+            Qs		  7.0710678118654757e-01
+
+        END Fixed
+
+    END Pointing
+
+    BEGIN Optics
+
+        FocalLength		  1.0000000000000000e+02
+        DetectorPitch		  1.0000000000000000e-03
+        IQConstant		  0.0000000000000000e+00
+        GsdCoefficient		  0.0000000000000000e+00
+
+    END Optics
+
+    BEGIN Extensions
+
+        BEGIN ExternData
+        END ExternData
+
+        BEGIN ADFFileData
+        END ADFFileData
+
+        BEGIN AccessConstraints
+            FieldOfView IncludeIntervals
+            LineOfSight IncludeIntervals
+
+            UsePreferredMaxStep No
+            PreferredMaxStep 360
+        END AccessConstraints
+
+        BEGIN ObjectCoverage
+        END ObjectCoverage
+
+        BEGIN Desc
+            BEGIN ShortText
+
+            END ShortText
+            BEGIN LongText
+
+            END LongText
+        END Desc
+
+        BEGIN Refraction
+            RefractionModel		 Effective Radius Method
+
+            UseRefractionInAccess		 No
+
+            BEGIN ModelData
+                RefractionCeiling		  5.0000000000000000e+03
+                MaxTargetAltitude		  1.0000000000000000e+04
+                EffectiveRadius		  1.3333333333333299e+00
+
+                UseExtrapolation		 Yes
+
+
+            END ModelData
+        END Refraction
+
+        BEGIN Crdn
+            BEGIN VECTOR
+                Type		 VECTOR_TOVECTOR
+                Name		 Argentina
+                Description		 Displacement vector to Argentina
+                Origin		
+                BEGIN POINT
+                    Type		 POINT_LINKTO
+                    Name		 Center
+                END POINT
+                Destination		
+                BEGIN POINT
+                    Type		 POINT_LINKTO
+                    Name		 Center
+                    RelativePath		 AreaTarget/Argentina
+                END POINT
+                LTDRefSystem		
+                BEGIN SYSTEM
+                    Type		 SYSTEM_LINKTO
+                    Name		 BarycenterICRF
+                    AbsolutePath		 CentralBody/Sun
+                END SYSTEM
+                Apparent		 No
+                TimeConvergence		  1.0000000000000000e-03
+                TimeSense		 Receive
+                IgnoreAberration		 No
+            END VECTOR
+            BEGIN VECTOR
+                Type		 VECTOR_TOVECTOR
+                Name		 Namibia
+                Description		 Displacement vector to Namibia
+                Origin		
+                BEGIN POINT
+                    Type		 POINT_LINKTO
+                    Name		 Center
+                END POINT
+                Destination		
+                BEGIN POINT
+                    Type		 POINT_LINKTO
+                    Name		 Center
+                    RelativePath		 AreaTarget/Namibia
+                END POINT
+                LTDRefSystem		
+                BEGIN SYSTEM
+                    Type		 SYSTEM_LINKTO
+                    Name		 BarycenterICRF
+                    AbsolutePath		 CentralBody/Sun
+                END SYSTEM
+                Apparent		 No
+                TimeConvergence		  1.0000000000000000e-03
+                TimeSense		 Receive
+                IgnoreAberration		 No
+            END VECTOR
+            BEGIN VECTOR
+                Type		 VECTOR_TOVECTOR
+                Name		 Satellite1_Bias
+                Description		 Displacement vector to Satellite1
+                Origin		
+                BEGIN POINT
+                    Type		 POINT_LINKTO
+                    Name		 Center
+                END POINT
+                Destination		
+                BEGIN POINT
+                    Type		 POINT_LINKTO
+                    Name		 Center
+                    RelativePath		 Satellite/Satellite1_Bias
+                END POINT
+                LTDRefSystem		
+                BEGIN SYSTEM
+                    Type		 SYSTEM_LINKTO
+                    Name		 BarycenterICRF
+                    AbsolutePath		 CentralBody/Sun
+                END SYSTEM
+                Apparent		 No
+                TimeConvergence		  1.0000000000000000e-03
+                TimeSense		 Receive
+                IgnoreAberration		 No
+            END VECTOR
+            BEGIN VECTOR
+                Type		 VECTOR_TOVECTOR
+                Name		 Satellite1_Bias-Sensor1
+                Description		 Displacement vector to Satellite1-Sensor1
+                Origin		
+                BEGIN POINT
+                    Type		 POINT_LINKTO
+                    Name		 Center
+                END POINT
+                Destination		
+                BEGIN POINT
+                    Type		 POINT_LINKTO
+                    Name		 Center
+                    RelativePath		 Satellite/Satellite1_Bias/Sensor/Sensor1
+                END POINT
+                LTDRefSystem		
+                BEGIN SYSTEM
+                    Type		 SYSTEM_LINKTO
+                    Name		 BarycenterICRF
+                    AbsolutePath		 CentralBody/Sun
+                END SYSTEM
+                Apparent		 No
+                TimeConvergence		  1.0000000000000000e-03
+                TimeSense		 Receive
+                IgnoreAberration		 No
+            END VECTOR
+            BEGIN VECTOR
+                Type		 VECTOR_TOVECTOR
+                Name		 Target1
+                Description		 Displacement vector to Target1
+                Origin		
+                BEGIN POINT
+                    Type		 POINT_LINKTO
+                    Name		 Center
+                END POINT
+                Destination		
+                BEGIN POINT
+                    Type		 POINT_LINKTO
+                    Name		 Center
+                    RelativePath		 Target/Target1
+                END POINT
+                LTDRefSystem		
+                BEGIN SYSTEM
+                    Type		 SYSTEM_LINKTO
+                    Name		 BarycenterICRF
+                    AbsolutePath		 CentralBody/Sun
+                END SYSTEM
+                Apparent		 No
+                TimeConvergence		  1.0000000000000000e-03
+                TimeSense		 Receive
+                IgnoreAberration		 No
+            END VECTOR
+        END Crdn
+
+        BEGIN Graphics
+
+            BEGIN Attributes
+
+                Inherit		 No
+                Show		 Yes
+                LineStyle		 0
+                LineWidth		 1
+                PatternColor		 #0e46ff
+
+            END Attributes
+
+            BEGIN Display
+
+                NumberOfPatterns		 1
+                PersistenceDuration		  0.0000000000000000e+00
+                PersistenceIgnoreDefChg		 No
+                UpdatesDefnOften		 No
+                MinDisplayAltitude		  0.0000000000000000e+00
+                MaxDisplayAltitude		  1.0000000000000000e+07
+                AltitudeIntersectSense		 Either
+                ShowBothAltCrossings		 No
+                IntersectType		 CentralBody
+                ShowGround		 Yes
+                UseProjectionRadii		 No
+                ExcludeHorizonArcs		 No
+                ForwardPersist		 No
+                FillPersist		 No
+                DsplyTmHidesPersist		 No
+                SpaceLength		  5.0000000000000000e+07
+                TgtExtLength		  0.0000000000000000e+00
+                FOVHalfAngle		 No
+                HalfAngle		  0.0000000000000000e+00
+                ProjDisplay		 Sphere
+                DisplayType		 ConstantRadius
+                DisplayFOVWithConstraints		 No
+                ShowBoresight		 No
+                BoresightMarker		 4
+                BoresightColor		 #ffffff
+                ShowFill		 No
+                FillTranslucency		 0.5
+                ShowOn2DMap		 Yes
+
+            END Display
+
+            BEGIN Swath
+
+                MaxStep		  6.0000000000000000e+01
+                MinStep		  1.0000000000000001e-01
+                CloseSwath		 Yes
+                Tolerance		  4.0000000000000000e+00
+                MatchTolerance		  9.0000000000000000e+01
+                ShowSwath		 No
+                ComputationalMethod		 Numerical
+                Color		 #ffff00
+                LineStyle		 0
+                LineWidth		 1
+                SwathIntervalPtr		
+                BEGIN EVENTINTERVAL
+                    BEGIN Interval
+                        Start		 16 Dec 2019 18:39:11.348000000
+                        Stop		 31 Dec 2019 18:39:11.348000000
+                    END Interval
+                    IntervalState		 Explicit
+                END EVENTINTERVAL
+
+
+            END Swath
+
+            BEGIN DisplayTimes
+                DisplayType		 AlwaysOn
+            END DisplayTimes
+        END Graphics
+
+        BEGIN Swath
+        END Swath
+
+        BEGIN VO
+        END VO
+
+    END Extensions
+
+    BEGIN SubObjects
+
+    END SubObjects
+
+END Sensor
+

@@ -1,0 +1,9 @@
+<?xml version = "1.0" standalone = "yes"?>
+<TimelineLine_Prefs STK_version = "12.0.0">
+    <Views Type = "Content">
+        <ContentView Name = "Scenario Availability" />
+    </Views>
+    <Views Type = "Time">
+        <TimeView FullViewRulerStartTime = "0.000000" FullViewRulerStopTime = "0.000000" GlobalIntervalComp = "AnalysisInterval" GlobalIntervalCompPath = "/Application/STK/Scenario/SPOOQY_1" GlobalStartOffset = "0.000000" GlobalStartTime = "16 Dec 2019 18:39:11.348" GlobalStopOffset = "0.000000" GlobalStopTime = "31 Dec 2019 18:39:11.348" MaxFullViewTime = "0.000000" MinFullViewTime = "0.000000" Name = "Scenario Analysis Period" ViewportStartTime = "0.000000" ViewportStopTime = "0.000000" />
+    </Views>
+</TimelineLine_Prefs>
